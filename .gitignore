@@ -1,0 +1,11 @@
+venv/
+.env
+data/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+src/api/
+dashboard.html
+dashboard/
+node_modules/
