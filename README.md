@@ -1,7 +1,7 @@
 # Regulatory-Change-Autopilot-AI-Powered-Compliance-Intelligence-System🔍
 ### Autonomous Regulatory Compliance Monitor for Indian FinTech
 
-> **Status: 🚧 Actively Under Development** — Core RAG pipeline and gap analysis engine are complete. MCP server integration and analyst dashboard are in progress.
+> **Status: 🚧 Actively Under Development** — Core RAG pipeline and gap analysis engine are complete. MCP server integration is Done and analyst dashboard and deployment is in progress.
 
 ---
 
