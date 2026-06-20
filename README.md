@@ -5,7 +5,7 @@
 
 ---
 
-## What is This?
+## What is This? 
 
 Indian FinTech companies — NBFCs, payment aggregators, co-operative banks — receive 40-60 new regulatory circulars every year from RBI, SEBI, and IRDAI. A compliance team today reads each circular manually, compares it against internal policies, writes a gap analysis, and creates remediation tasks. This takes 2-3 days per circular.
 
@@ -46,22 +46,26 @@ Gap Analysis Result:
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                  LAYER 1 — DATA INGESTION               │
-│   RBI Circulars │ SEBI Notices │ IRDAI Guidelines       │
-│   PDF Scraper   │ RSS Watcher  │ Internal Policy Docs   │
+│   RBI Circular Index — scraped LIVE via Playwright      │
+│   (real headless browser, bypasses Cloudflare)          │
+│   PyMuPDF extracts text from downloaded PDFs            │
+│   Internal Policy Docs — manually uploaded for now      │
 └────────────────────────┬────────────────────────────────┘
                          ↓
 ┌─────────────────────────────────────────────────────────┐
 │                  LAYER 2 — RAG CORE                     │
-│   PyMuPDF (extract) → Chunker → HuggingFace (embed)    │
+│   Chunker → HuggingFace (embed, local, free)            │
 │   Qdrant Vector Store → Semantic Retrieval              │
-│   LangChain + Groq LLaMA 3 → Gap Analysis Engine       │
+│   LangChain + Groq LLaMA 3 → Gap Analysis Engine        │
 └────────────────────────┬────────────────────────────────┘
                          ↓
 ┌─────────────────────────────────────────────────────────┐
-│                  LAYER 3 — MCP ACTION LAYER  🚧         │
-│   watch_regulator_feed │ run_policy_diff                │
-│   create_jira_epic     │ post_slack_alert               │
-│   log_analysis_event   │ chat_with_policy               │
+│                  LAYER 3 — MCP ACTION LAYER  ✅         │
+│   watch_regulator_feed   → triggers Playwright scraper  │
+│   run_gap_analysis       → Groq-powered gap detection   │
+│   list_pending_circulars → queue of unanalysed circulars│
+│   get_circular_summary   → plain English briefing       │
+│   Connected live to Claude Desktop                      │
 └─────────────────────────────────────────────────────────┘
 ```
 
