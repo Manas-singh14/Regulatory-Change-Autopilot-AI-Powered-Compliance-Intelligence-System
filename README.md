@@ -225,7 +225,7 @@ Every NBFC and payment aggregator in India has a compliance team of 3-8 people m
 
 Built by Manas singh as part of an AI engineering portfolio project.
 
-Currently actively developing Phase 3 (MCP integration) and Phase 4 (dashboard).
+Currently actively developing Phase 4 (dashboard & deployment).
 
 Feel free to reach out or raise issues — feedback welcome.
 
