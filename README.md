@@ -14,7 +14,7 @@ Indian FinTech companies — NBFCs, payment aggregators, co-operative banks — 
 The system watches regulatory feeds, extracts text from new PDFs, semantically compares them against your internal policy documents, and outputs a structured compliance gap report — with severity ratings, cited policy clauses, and suggested actions.
 
 ---
-## Images
+## Images (Using Claude Code as a client)
 <img width="1025" height="486" alt="Screenshot 2026-06-26 175645" src="https://github.com/user-attachments/assets/760b8c97-3e95-40cc-b6ff-69a8885b1511" />
 <img width="1047" height="660" alt="Screenshot 2026-06-26 175744" src="https://github.com/user-attachments/assets/321c3750-7af4-4f39-a44f-8b06087d918b" />
 <img width="965" height="456" alt="Screenshot 2026-06-26 175814" src="https://github.com/user-attachments/assets/235d885f-3bc9-4aa4-a39b-07c602aa187a" />
