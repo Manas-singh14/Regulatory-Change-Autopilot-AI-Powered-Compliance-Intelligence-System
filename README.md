@@ -186,7 +186,7 @@ Chunks are embedded using `all-MiniLM-L6-v2` — a 384-dimension model that runs
 ### 4. Gap Analysis
 The core prompt asks Groq (LLaMA 3) to reason in a specific direction: *"What does the new circular require that existing policy does NOT address?"* — not a generic comparison. This precision reduces hallucinations significantly. Output is forced to a Pydantic-validated JSON schema with severity, cited clauses, and remediation steps.
 
-### 5. MCP Integration (In Progress)
+### 5. MCP Integration 
 Each capability is being exposed as an MCP tool so any AI agent (Claude, LangChain agent, etc.) can call them. The `watch_regulator_feed` tool polls RSS feeds; `run_policy_diff` triggers gap analysis; `create_jira_epic` creates tasks from gaps automatically.
 
 ---
